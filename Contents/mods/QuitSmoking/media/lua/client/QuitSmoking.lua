@@ -35,8 +35,7 @@ local function quitChanceUpdate(_player, _playerdata)
         if player:HasTrait("Lucky") then
             newchance = ZombRand(1,100)/33600 ;
             playerdata.incremental = playerdata.incremental + 0.01 ;
-        end
-        if player:HasTrait("Unlucky") then
+        elseif player:HasTrait("Unlucky") then
             newchance = ZombRand(1,100)/134400 ;
             playerdata.incremental = playerdata.incremental + 0.002 ;
         else newchance =ZombRand(1,100)/67200;
